@@ -1,0 +1,2 @@
+aiohttp==3.7.3
+rororo==2.2.0
