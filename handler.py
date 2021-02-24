@@ -11,8 +11,8 @@ async def upload(request):
         if content == "multipart/form-data":
             reader = await request.multipart()
             filename = await save_file(reader)
-    except Exception:
-        return web.Response(status=500)
+    except Exception as e:
+        return web.Response(text=str(e), status=500)
 
     if filename:
         return web.Response(status=200)

@@ -4,7 +4,7 @@ from rororo import setup_openapi
 import views
 
 
-def create_app() -> web.Application:
+def create_app():
     return setup_openapi(
         web.Application(),
         "./openapi.json",
