@@ -28,7 +28,7 @@ async def save_file(reader):
 
         if part is None:
             break
-        elif part.name == "prt_file" or part.name == "zipFileName":
+        elif part.name == "file":
             filename = part.filename
 
             with open(filename, "wb") as f:

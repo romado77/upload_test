@@ -5,7 +5,7 @@ import views
 
 
 def create_app():
-    return setup_openapi(
+    app = setup_openapi(
         web.Application(),
         "./openapi.json",
         views.operations,
@@ -13,9 +13,8 @@ def create_app():
         use_error_middleware=False,
     )
 
-    # app = web.Application()
-    # app.router.add_view("/api/v1/", views.UploadView)
-    # return app
+    app.router.add_view("/api/v2/", views.UploadView)
+    return app
 
 
 if __name__ == "__main__":

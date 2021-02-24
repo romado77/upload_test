@@ -4,7 +4,7 @@
       "title": "Upload test",
       "description": "Upload test",
       "contact": {
-        "email": "drv@cisco.com"
+        "email": "test@test.com"
       },
       "version": "1.0"
     },
@@ -24,34 +24,19 @@
               "multipart/form-data": {
                 "schema": {
                   "properties": {
-                    "devicename": {
+                    "someinfo": {
                       "type": "string",
-                      "example": "SEP5006AB805584"
-                    },
-                    "serialno": {
-                      "type": "string",
-                      "example": "PUC19420E1I"
-                    },
-                    "username": {
-                      "type": "string"
+                      "example": "asdlkqwhjrlkjhaskj"
                     },
                     "prt_file": {
                       "type": "string",
-                      "example": "prt-20200731-142448-5006AB805584.tar.gz",
-                      "format": "binary"
-                    },
-                    "zipFileName": {
-                      "type": "string",
-                      "example": "Jabber-Win-12.7.0.288632-20200728_000556-Windows_10_Enterprise.zip",
+                      "example": "test.tar.gz",
                       "format": "binary"
                     }
                   }
                 },
                 "encoding": {
-                  "prt_file":{
-                    "contentType": "application/gzip, application/zip"
-                  },
-                  "zipFileName":{
+                  "file":{
                     "contentType": "application/gzip, application/zip"
                   }
                 }
